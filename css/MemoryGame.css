@@ -99,13 +99,13 @@ body {
 /* Lvl selector and start button*/
 #memory_settings_dropdown, #memory_settings_start {
     border-radius: 20px;
-    width: 100%;
+    width: 80%;
     margin-bottom: 16px;
     font-size: 25px;    
     font: bold;
     background: transparent;    
     color: rgb(5, 0, 0);
-    height: 80px;       
+    height: 60px;       
     text-align-last:center; 
     background-color: rgba(236, 235, 235, 0.904);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
