@@ -1,0 +1,275 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder2/hintergrund.jpg);
+    /* background-color: black; */
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+}
+
+.template {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    /*for end message*/
+    z-index: 3;
+    width: 100%;
+    /*hide the menu*/
+    visibility: hidden;
+}
+
+.template.show {
+    visibility: visible;
+}
+
+.valign-table {
+    display: table;
+    table-layout: fixed;   
+}
+
+/*Align Lvl-Selector in the middle*/
+.valign-cell {
+    display: table-cell;
+    vertical-align: middle;     
+}
+
+/*sum of #memory_container height and .memory_menuBar height should match 100%*/
+#memory_container {    
+    width: 100vw;
+    height: 100vh;
+    width: 100%;
+    height: 95%;
+}
+
+.memory_menuBar {
+    position: relative;
+    width: 100%;       
+    height: 5%;
+    display: table;  
+    z-index: 5;
+}
+
+/*Settings icon*/
+#memory_menuIcon {
+    height: 50px;
+    display: block;
+    padding: 10px 8px;
+    float: right;
+    z-index: 5;
+}
+
+/*Template if game won*/
+#memory_endgame_template .wrapper {
+    background-color: rgba(131, 182, 240, 0.945);
+    text-align: center;
+    color: rgb(10, 0, 0);
+    padding: 30px 0;
+}
+
+/*Settings menu template*/
+#memory_settings_template {
+    
+    background-color: rgba(194, 193, 193, 0.692);   /*total background*/
+    z-index: 4;
+}
+
+#memory_settings_template form {
+    min-width: 240px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(14, 2, 2);
+}
+
+/*Titel for difficulty lvl maybe not needed*/
+.memory--settings-label {
+    margin: 8px 0;
+}
+
+/* Lvl selector and start button*/
+#memory_settings_dropdown, #memory_settings_start {
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 25px;    
+    font: bold;
+    background: transparent;    
+    color: rgb(5, 0, 0);
+    height: 80px;       
+    text-align-last:center; 
+    background-color: rgba(236, 235, 235, 0.904);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+#memory_settings_dropdown option {  
+    padding-top: 5px;
+    padding-bottom: 5px;       
+    text-align-last:center;    
+}
+
+/*start button */
+#memory_settings_start {
+    border-radius: 20px;
+    border: 1px solid rgba(32, 31, 32, 0.582);
+    cursor: pointer;
+}
+
+#memory_settings_start:active {
+    transform: scale(.95);
+    box-shadow: 3px 5px 6px;
+}
+
+/* CardArea*/
+#memory_cards {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    list-style-type: none;
+    list-style-image: none;
+    position: relative;           
+}
+
+/* entire container, keeps perspective */
+.flip_container {
+    perspective: 1000px;
+    float: left;
+    
+}
+
+/* flip the pane when clicked */
+
+.flip_container.clicked .front {
+    transform: rotateY(180deg);
+}
+
+.flip_container.clicked .back {
+    transform: rotateY(0deg);
+}
+
+/* Card pane*/
+.flipper {
+    width: 90%;
+    height: 90%;
+    margin: 0% auto;
+    transition: 0.9s;
+    transform-style: preserve-3d;
+    position: relative;
+    top: 5%;
+    bottom: 5%;    
+}
+
+
+/*  Memory card*/
+.front, .back {
+    width: 100%;
+    height: 80%;
+    display: block;
+    /*hide the back*/
+    backface-visibility: hidden;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+/* Front card*/
+.front {    
+    transform: rotateY(0deg);   
+    border-radius: 5%;
+    background-image: url(../Bilder2/karte.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+}
+
+/* 3-D click effect, when clicked*/
+.front:active {
+    transform: scale(0.87);
+}
+
+/* Back card, initially hidden*/
+.back {
+    /* Rotate back -180 looks better than +180*/
+    transform: rotateY(-180deg);
+    background-color: #fff;
+    border-radius: 5%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*
+Images for the backface of the cards can be changed by adding new images to the folder
+*/
+
+.back.card1 {
+    background-image: url(../Bilder2/1.png);
+}
+
+.back.card2 {
+    background-image: url(../Bilder2/2.png);
+}
+
+.back.card3 {
+    background-image: url(../Bilder2/3.png);
+}
+
+.back.card4 {
+    background-image: url(../Bilder2/4.png);
+}
+
+.back.card5 {
+    background-image: url(../Bilder2/5.png);
+}
+
+.back.card6 {
+    background-image: url(../Bilder2/6.png);
+}
+
+.back.card7 {
+    background-image: url(../Bilder2/7.png);
+}
+
+.back.card8 {
+    background-image: url(../Bilder2/8.png);
+}
+
+.back.card9 {
+    background-image: url(../Bilder2/9.png);
+}
+
+.back.card10 {
+    background-image: url(../Bilder2/10.png);
+}
+
+.back.card11 {
+    background-image: url(../Bilder2/11.png);
+}
+
+.back.card12 {
+    background-image: url(../Bilder2/12.png);
+}
+
+.back.card13 {
+    background-image: url(../Bilder2/13.png);
+}
+
+.back.card14 {
+    background-image: url(../Bilder2/14.png);
+}
+
+.back.card15 {
+    background-image: url(../Bilder2/15.png);
+}
