@@ -9,7 +9,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../Bilder2/hintergrund.jpg);
+    background-image: url(../images/hintergrund.jpg);
     /* background-color: black; */
      background-repeat: no-repeat;
      background-position: center;
@@ -72,13 +72,14 @@ body {
 #memory_endgame_template .wrapper {
     background-color: rgba(131, 182, 240, 0.945);
     text-align: center;
+    font-family: AhkioW05-Light;
+    font-size: 20px;    
     color: rgb(10, 0, 0);
     padding: 30px 0;
 }
 
 /*Settings menu template*/
-#memory_settings_template {
-    
+#memory_settings_template {    
     background-color: rgba(194, 193, 193, 0.692);   /*total background*/
     z-index: 4;
 }
@@ -91,21 +92,24 @@ body {
     color: rgb(14, 2, 2);
 }
 
-/*Titel for difficulty lvl maybe not needed*/
-.memory--settings-label {
-    margin: 8px 0;
+/*Titel for settings menu*/
+.memory_settings_titel {
+    margin: 20px 0;
+    color: rgb(29, 3, 182);   
+    font-size: 80px; 
+    font-family: AhkioW05-Light;    
 }
 
 /* Lvl selector and start button*/
 #memory_settings_dropdown, #memory_settings_start {
     border-radius: 20px;
-    width: 80%;
+    width: 100%;
     margin-bottom: 16px;
     font-size: 25px;    
     font: bold;
     background: transparent;    
     color: rgb(5, 0, 0);
-    height: 60px;       
+    height: 80px;       
     text-align-last:center; 
     background-color: rgba(236, 235, 235, 0.904);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
@@ -188,7 +192,7 @@ body {
 .front {    
     transform: rotateY(0deg);   
     border-radius: 5%;
-    background-image: url(../Bilder2/karte.png);
+    background-image: url(../images/karte.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;    
@@ -215,61 +219,61 @@ Images for the backface of the cards can be changed by adding new images to the 
 */
 
 .back.card1 {
-    background-image: url(../Bilder2/1.png);
+    background-image: url(../images/1.png);
 }
 
 .back.card2 {
-    background-image: url(../Bilder2/2.png);
+    background-image: url(../images/2.png);
 }
 
 .back.card3 {
-    background-image: url(../Bilder2/3.png);
+    background-image: url(../images/3.png);
 }
 
 .back.card4 {
-    background-image: url(../Bilder2/4.png);
+    background-image: url(../images/4.png);
 }
 
 .back.card5 {
-    background-image: url(../Bilder2/5.png);
+    background-image: url(../images/5.png);
 }
 
 .back.card6 {
-    background-image: url(../Bilder2/6.png);
+    background-image: url(../images/6.png);
 }
 
 .back.card7 {
-    background-image: url(../Bilder2/7.png);
+    background-image: url(../images/7.png);
 }
 
 .back.card8 {
-    background-image: url(../Bilder2/8.png);
+    background-image: url(../images/8.png);
 }
 
 .back.card9 {
-    background-image: url(../Bilder2/9.png);
+    background-image: url(../images/9.png);
 }
 
 .back.card10 {
-    background-image: url(../Bilder2/10.png);
+    background-image: url(../images/10.png);
 }
 
 .back.card11 {
-    background-image: url(../Bilder2/11.png);
+    background-image: url(../images/11.png);
 }
 
 .back.card12 {
-    background-image: url(../Bilder2/12.png);
+    background-image: url(../images/12.png);
 }
 
 .back.card13 {
-    background-image: url(../Bilder2/13.png);
+    background-image: url(../images/13.png);
 }
 
 .back.card14 {
-    background-image: url(../Bilder2/14.png);
+    background-image: url(../images/14.png);
 }
 
 .back.card15 {
-    background-image: url(../Bilder2/15.png);
+    background-image: url(../images/15.png);
 }
